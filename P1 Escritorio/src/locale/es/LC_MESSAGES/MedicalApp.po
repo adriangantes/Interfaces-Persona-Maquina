@@ -1,0 +1,247 @@
+# Spanish translations for ipm package
+# Traducciones al español para el paquete ipm.
+# Copyright (C) 2024 THE ipm'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the ipm package.
+# Automatically generated, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ipm 2425-p_escritorio-zz-top\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-19 20:33+0200\n"
+"PO-Revision-Date: 2024-10-19 20:33+0200\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: view.py:69
+msgid "Argument is not a valid time"
+msgstr "El argumento no es una hora válida"
+
+#: view.py:151
+msgid "Medical Application"
+msgstr "Aplicación Médica"
+
+#: view.py:356
+msgid "Selected patient"
+msgstr "Paciente seleccionado"
+
+#: view.py:361
+msgid "Code"
+msgstr "Código"
+
+#: view.py:368
+msgid "Name"
+msgstr "Nombre"
+
+#: view.py:373
+msgid "Surname"
+msgstr "Apellido"
+
+#: view.py:380
+msgid "List of Medications"
+msgstr "Lista de Medicamentos"
+
+#: view.py:389
+msgid "Add Medication"
+msgstr "Añadir Medicamento"
+
+#: view.py:390 view.py:598
+msgid "Delete Medication"
+msgstr "Eliminar Medicamento"
+
+#: view.py:408
+msgid "Selected Medication"
+msgstr "Medicamento seleccionado"
+
+#: view.py:411 view.py:957
+msgid "Medication Name"
+msgstr "Nombre del Medicamento"
+
+#: view.py:416 view.py:964
+msgid "Dosage"
+msgstr "Dosis"
+
+#: view.py:421 view.py:971
+msgid "Start Date Treatment"
+msgstr "Fecha de Inicio del Tratamiento"
+
+#: view.py:427 view.py:978
+msgid "Treatment Duration (days)"
+msgstr "Duración del Tratamiento (días)"
+
+#: view.py:434
+msgid "Save Changes"
+msgstr "Guardar Cambios"
+
+#: view.py:442
+msgid "List of Posologies"
+msgstr "Lista de Posologías"
+
+#: view.py:446 view.py:1222
+msgid "Delete Posologie"
+msgstr "Eliminar Posología"
+
+#: view.py:451 view.py:912
+msgid "Add Posologie"
+msgstr "Añadir Posología"
+
+#: view.py:571
+msgid "Warning"
+msgstr "Advertencia"
+
+#: view.py:587
+msgid "Accept"
+msgstr "Aceptar"
+
+#: view.py:603
+msgid "Confirm medication deletion?"
+msgstr "¿Confirmar la eliminación del medicamento?"
+
+#: view.py:609 view.py:931 view.py:988 view.py:1232
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: view.py:613 view.py:1236
+msgid "Delete"
+msgstr "Eliminar"
+
+#: view.py:789
+msgid "ID patient/medication is null"
+msgstr "El ID del paciente/medicamento es nulo"
+
+#: view.py:796 view.py:1073
+msgid "Medication 's name can not be empty"
+msgstr "El nombre del medicamento no puede estar vacío"
+
+#: view.py:806 view.py:1082
+msgid "Start Date format incorrect"
+msgstr "Formato de la fecha de inicio incorrecto"
+
+#: view.py:815 view.py:1091
+msgid "Dosage must be a number"
+msgstr "La dosis debe ser un número"
+
+#: view.py:821
+msgid "Treatment duration must be a number"
+msgstr "La duración del tratamiento debe ser un número"
+
+#: view.py:833
+msgid "ID patient/medication/posologie is null"
+msgstr "El ID del paciente/medicamento/posología es nulo"
+
+#: view.py:841
+msgid "Hour can not be empty"
+msgstr "La hora no puede estar vacía"
+
+#: view.py:845
+msgid "Minute can not be empty"
+msgstr "El minuto no puede estar vacío"
+
+#: view.py:852 view.py:1132
+msgid "Hour must be a number between 0 and 23"
+msgstr "La hora debe ser un número entre 0 y 23"
+
+#: view.py:856 view.py:1135
+msgid "Hour must be a number"
+msgstr "La hora debe ser un número"
+
+#: view.py:864 view.py:1142
+msgid "Minute must be a number between 0 and 59"
+msgstr "El minuto debe ser un número entre 0 y 59"
+
+#: view.py:868 view.py:1145
+msgid "Minute must be a number"
+msgstr "El minuto debe ser un número"
+
+#: view.py:876
+msgid "Posologie"
+msgstr "Posología"
+
+#: view.py:879 view.py:915
+msgid "Hour"
+msgstr "Hora"
+
+#: view.py:882 view.py:918
+msgid "Minute"
+msgstr "Minuto"
+
+#: view.py:891
+msgid "Save"
+msgstr "Guardar"
+
+#: view.py:927
+msgid "Add"
+msgstr "Añadir"
+
+#: view.py:954
+msgid "New Medication"
+msgstr "Nuevo Medicamento"
+
+#: view.py:986
+msgid "Confirm"
+msgstr "Confirmar"
+
+#: view.py:1015
+msgid "Ex: Ibuprofeno Normon"
+msgstr "Ej: Ibuprofeno Normon"
+
+#: view.py:1016
+msgid "Ex: 2, (default 1)"
+msgstr "Ej: 2, (por defecto 1)"
+
+#: view.py:1017
+msgid "Ex: "
+msgstr "Ej: "
+
+#: view.py:1018
+msgid "Ex: 10, (default 1)"
+msgstr "Ej: 10, (por defecto 1)"
+
+#: view.py:1044
+msgid "Ex: 17"
+msgstr "Ej: 17"
+
+#: view.py:1045
+msgid "Ex: 54"
+msgstr "Ej: 54"
+
+#: view.py:1064
+msgid "ID patient can not be null"
+msgstr "El ID del paciente no puede ser nulo"
+
+#: view.py:1100
+msgid "Treatment duration must be a number or empty"
+msgstr "La duración del tratamiento debe ser un número o estar vacía"
+
+#: view.py:1111
+msgid "ID patient/ ID medication can not be null"
+msgstr "El ID del paciente/medicamento no puede ser nulo"
+
+#: view.py:1120
+msgid "Posologie's hour can not be empty"
+msgstr "La hora de la posología no puede estar vacía"
+
+#: view.py:1125
+msgid "Posologie's minute can not be empty"
+msgstr "El minuto de la posología no puede estar vacío"
+
+#: view.py:1227
+msgid "Confirm posologie deletion?"
+msgstr "¿Confirmar la eliminación de la posología?"
+
+#: presenter.py:86 presenter.py:112 presenter.py:122
+msgid "No more patients"
+msgstr "No hay más pacientes"
+
+#: presenter.py:207 presenter.py:286
+msgid "Changes Saved"
+msgstr "Cambios Guardados"
+
+#: presenter.py:231 presenter.py:281
+msgid "Error, Posologie not found"
+msgstr "Error, Posología no encontrada"

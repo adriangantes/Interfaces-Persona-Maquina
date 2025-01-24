@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MEDREPORTS</title>
+  <link rel="stylesheet" href="styleSheet.css">
+  <script src="model.js"></script>
+</head>
+<body>
+  <main>
+    <!-- Página de búsqueda -->
+    <div class="container">
+      <section id="search-page">
+        <header class="header">
+          <h1>Buscar Pacientes</h1>
+        </header>
+        <div class="main">
+          <!--<h2 class="visually-hidden">Pagina inicial para buscar un paciente por ID</h2> --> <!--Encabezado oculto ya que no es necesario pero que esta para tecnologias de asistencia -->
+          <!-- Formulario de búsqueda -->
+          <div class="search-section">
+            <!-- <h2 class="visually-hidden">Campo de entrada para buscar pacientes según el ID</h2> --> <!--Encabezado oculto ya que no es necesario pero que esta para tecnologias de asistencia -->
+            <!-- Lo correcto para marcar input, select y text area es un label-->
+            <label for="search-input" class="visually-hidden">Buscar paciente</label>
+            <input 
+              type="search" 
+              id="search-input" 
+              placeholder="Ingresa el ID del paciente" 
+              autocomplete="on">
+            <!-- En el caso de los botones, lo correcto es marcarlo con un atributo aria -->
+            <button 
+              type="submit"
+              id="search-button" 
+              aria-label="Buscar paciente"
+              >🔍</button>
+          </div>
+  
+          <!-- Lista de resultados -->
+          <div>
+            <!-- <h2 class="visually-hidden">Lista de pacientes</h2> --> <!--Encabezado oculto ya que no es necesario pero que esta para tecnologias de asistencia -->
+            <ul 
+              id="result-list"
+              class="result-list" 
+              aria-live="polite"
+              aria-label="Presione Paciente para mostrar su Información">
+            </ul>
+            <button
+              id="load-all-patients-button"
+              aria-expanded="false"
+              aria-controls="result-list"
+              >Cargar todos los pacientes</button> <!-- Expanded indica que la información no se está motrando -->
+          </div>
+        </div>
+      </section>
+      
+      <!-- Separación en columnas-->
+      <div class="right-column">
+        <!-- Página de información del paciente -->
+        <section class="visually-hidden" id="patient-page" aria-live="assertive">
+          <header class="header">
+            <h1>Información del Paciente</h1>
+          </header>
+          <div class="main">
+            <!-- <h2 class="visually-hidden">Página principal donde se indica el formulario obtenido para el paciente seleccionado</h2> --> <!--Encabezado oculto ya que no es necesario pero que esta para tecnologias de asistencia -->
+    
+            <!-- Información del paciente -->
+            <div class="patient-info-section">
+              <!-- <h2 class="visually-hidden">Información sobre el paciente</h2> --> <!--Encabezado oculto ya que no es necesario pero que esta para tecnologias de asistencia -->
+              <dl>
+                <dt>Nombre:</dt>
+                <dd id="patient-name">Nombre</dd>
+                <dt>Apellido:</dt>
+                <dd id="patient-surname">Apellido</dd>
+                <dt>Código:</dt>
+                <dd id="patient-code">Código</dd>
+              </dl>
+            </div>
+    
+            <hr class="separator">
+    
+            <!-- Filtros de fechas -->
+            <div class="date-filter-section">
+              <!-- <h2 class="visually-hidden">Filtros de fecha para filtrar las tomas, debe escoger uno</h2> --> <!--Encabezado oculto ya que no es necesario pero que esta para tecnologias de asistencia -->
+              <form id="date-filter-form">
+                <fieldset>
+                  <legend>Filtrar por fechas:</legend>
+                  <div>
+                    <!-- Último mes -->
+                    <input 
+                      id="last-month" 
+                      type="radio" 
+                      name="time-filter" 
+                      value="last-month" 
+                      checked>
+                    <label for="last-month">Último mes</label>
+                  </div>
+    
+                  <div>
+                    <!-- Últimos N días -->
+                    <input 
+                      id="last-n-days" 
+                      type="radio" 
+                      name="time-filter" 
+                      value="last-n-days">
+                    <label for="last-n-days">Últimos días:</label>
+                    <input 
+                      type="number" 
+                      id="last-days-input" 
+                      name="last-n-days-value" 
+                      min="1" 
+                      max="365" 
+                      placeholder="Días" 
+                      disabled>
+                    <label for="last-days-input" class="visually-hidden">Valor del número de dias</label>
+                  </div>
+    
+                  <div>
+                    <!-- Intervalo de fechas -->
+                    <input 
+                      id="date-range" 
+                      type="radio" 
+                      name="time-filter" 
+                      value="date-range">
+                    <label for="date-range">Intervalo entre:</label>
+                    <input 
+                      type="date" 
+                      id="start-date" 
+                      name="start-date" 
+                      disabled>
+                    <label for="start-date">y</label>
+                    <!--En algunos usos del label es para los lectores de pantalla pero porque queremos que visiblemente no se vea la etiqueta (en este caso no queda bien y es redundate a parte de ocupar mucho espacio en la pantalla)-->
+                    <input 
+                      type="date" 
+                      id="end-date" 
+                      name="end-date" 
+                      disabled>
+                    <label for="end-date" class="visually-hidden">valor fecha final</label>
+                  </div>
+                </fieldset>
+                <hr class="separator">
+                <button type="button" class="buttonHorizontal" id="back-button-patient-page">Inicio 🏠</button>
+                <button type="button" class="buttonHorizontal" id="apply-filter-button">Buscar 🔍</button>
+              </form>
+            </div>
+          </div>
+        </section>
+    
+        <section class="visually-hidden" id="results-page" aria-live="assertive" >
+          <header class="header">
+            <h1>Resultados de la búsqueda</h1>
+          </header>
+          <div class="main">
+            <!-- <h2 class="visually-hidden">Detalles sobre un medicamento</h2> --> <!--Encabezado oculto ya que no es necesario pero que esta para tecnologias de asistencia -->
+    
+            <div id="medications-container" aria-live="assertive"></div>
+    
+            <button id="cerrar-informe-button" >Cerrar informe</button>
+          </div>
+        </section>
+    
+        <!--Pantalla de error, tipica 404-->
+        <section class="visually-hidden" id="error-page">
+          <header class="header">
+            <h1>Error</h1> <!-- Titulo principal -->
+          </header>
+        
+          <div class="main">
+            <!-- <h2 class="visually-hidden">Pantalla de error</h2> --> <!--Encabezado oculto ya que no es necesario pero que esta para tecnologias de asistencia -->
+            <p id="error-message">404 - No se puede recuperar la informacion. Por favor, intenta nuevamente.</p>
+            <button id="back-button">Volver</button> <!-- Botón para regresar -->
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+      <p>&copy; 2024 MEDSYSTEM IPM</p>
+    </footer>
+  </main>
+</body>
+</html>
